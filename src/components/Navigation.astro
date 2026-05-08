@@ -1,0 +1,16 @@
+---
+const pathname = Astro.url.pathname;
+
+const links = [
+  { href: '/', label: 'Home', isActive: pathname === '/' },
+  { href: '/about', label: 'About me', isActive: pathname.startsWith('/about') },
+  { href: '/projects', label: 'Projects', isActive: pathname.startsWith('/projects') },
+];
+---
+<div id="main-menu" class="nav-links">
+  {links.map((link) => (
+    <a href={link.href} aria-current={link.isActive ? 'page' : undefined}>
+      {link.label}
+    </a>
+  ))}
+</div>

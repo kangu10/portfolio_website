@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = '30 Day Map Challenge 2025';
+---
+<BaseLayout pageTitle={pageTitle}>
+  <article class="project-detail">
+    <div class="project-detail-hero">
+      <div class="project-detail-copy">
+        <!-- <p class="project-summary">
+          A selection of maps created for the 30 Day Map Challenge 2025, exploring different
+          visual styles, subjects, and storytelling approaches.
+        </p> -->
+        <div class="project-facts">
+          <p>Static maps</p>
+          <p>2025</p>
+          <p>QGIS, Python, R, Foursquare Studio</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-richtext">
+      <h2>Overview</h2>
+      <p>
+        The 30 Day Map Challenge is an annual mapping challenge built around daily prompts.
+        This page collects some maps I made in 2025, exploring different
+        visual styles, subjects and storytelling approaches.
+      </p>
+
+      <!-- <h2>Map gallery</h2> -->
+      <div class="project-gallery-shell">
+        <button class="project-gallery-arrow project-gallery-arrow-prev" type="button" aria-label="Previous map">
+          &larr;
+        </button>
+        <div class="project-gallery-viewport">
+          <div class="project-gallery" aria-label="30 Day Map Challenge 2025 gallery">
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open map 1 larger">
+                <img
+                  src="/images/30daymapchallenge-2025-1.png"
+                  alt="30DayMapChallenge 2025 map 1."
+                />
+              </button>
+              <figcaption>Day 2. Lines. Network Betweenness in La Plata, Argentina.</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open map 2 larger">
+                <img
+                  src="/images/30daymapchallenge-2025-2.png"
+                  alt="30DayMapChallenge 2025 map 2."
+                />
+              </button>
+              <figcaption>Day 3. Polygons. Premier League stadiums. Love this one.</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open map 3 larger">
+                <img
+                  src="/images/30daymapchallenge-2025-3.png"
+                  alt="30DayMapChallenge 2025 map 3."
+                />
+              </button>
+              <figcaption>Day 4. My Data. Five days from my hike in Turkey.</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open animated map larger">
+                <img
+                  src="/images/30daymapchallenge-2025-4.gif"
+                  alt="30DayMapChallenge 2025 animated map."
+                />
+              </button>
+              <figcaption>Day 6. Dimensions. Car collisions in Serbia, 2024 (timeslider on Foursquare Studio).</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open map 5 larger">
+                <img
+                  src="/images/30daymapchallenge-2025-5.png"
+                  alt="30DayMapChallenge 2025 map 5."
+                />
+              </button>
+              <figcaption>Day 7. Accessibility. Rave Accessibility in Berlin.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="project-gallery-arrow project-gallery-arrow-next" type="button" aria-label="Next map">
+          &rarr;
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <dialog class="project-lightbox" aria-label="Expanded 30 Day Map Challenge 2025 map view">
+    <div class="project-lightbox-panel">
+      <button class="project-lightbox-close" type="button" aria-label="Close expanded map">
+        &times;
+      </button>
+      <button class="project-lightbox-nav project-lightbox-prev" type="button" aria-label="Show previous map">
+        &larr;
+      </button>
+      <figure class="project-lightbox-figure">
+        <img class="project-lightbox-image" src="" alt="" />
+        <figcaption class="project-lightbox-caption"></figcaption>
+      </figure>
+      <button class="project-lightbox-nav project-lightbox-next" type="button" aria-label="Show next map">
+        &rarr;
+      </button>
+    </div>
+  </dialog>
+
+  <script>
+    import '../../scripts/project-gallery-embla.js';
+  </script>
+</BaseLayout>

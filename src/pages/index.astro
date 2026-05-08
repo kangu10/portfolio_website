@@ -1,0 +1,94 @@
+---
+const pageTitle = "Semyon Skotnikov";
+import '../styles/index.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const tools = [
+  'Python',
+  'R',
+  'SQL (PostgreSQL/PostGIS)',
+  'JavaScript',
+  'QGIS',
+  'ArcGIS',
+  'Adobe Photoshop',
+];
+
+const skills = [
+  'Spatial analysis',
+  'Cartography',
+  'Spatial data engineering',
+  'Web mapping',
+  'Urban data analysis',
+  'QGIS plugin development',
+];
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/website-icon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <style is:inline>
+      .hero-copy::before,
+      .page-heading::before {
+        content: none !important;
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main class="hero-page">
+      <section class="hero">
+        <div class="hero-copy">
+          <!-- <p class="hero-kicker">Urban GIS / Mapping / Research</p> -->
+          <h1>{pageTitle}</h1>
+          <p class="hero-text">
+            Hey there! My name is Semyon, I am a GIS Analyst and urban researcher. I like solving urban planning problems by combining maps, data and spatial analysis.
+          </p>
+          <p class="hero-text">
+            This website brings together some of my geospatial projects from work and independent practice.
+          </p>
+          <ul class="hero-meta-list">
+            <li>GIS Analyst at <a href="https://www.mic-hub.com/" target="_blank" rel="noopener noreferrer">MIC-HUB</a></li>
+            <li>Based in Belgrade, Serbia</li>
+          </ul>
+        </div>
+        <div class="hero-portrait">
+          <img
+            src="/images/face-pic.png"
+            alt="Portrait of Semyon Skotnikov"
+          />
+        </div>
+      </section>
+
+      <section class="stack-section" aria-labelledby="tools-heading">
+        <div class="stack-header">
+          <h2 id="tools-heading">Tools I use:</h2>
+        </div>
+        <ul class="skills-list">
+          {tools.map((tool) => (
+            <li>{tool}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="stack-section stack-section-compact" aria-labelledby="skills-heading">
+        <div class="stack-header">
+          <h2 id="skills-heading">Things I do:</h2>
+        </div>
+        <ul class="skills-list">
+          {skills.map((skill) => (
+            <li>{skill}</li>
+          ))}
+        </ul>
+      </section>
+    </main>
+    <Footer showCue={true} />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>

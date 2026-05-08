@@ -1,0 +1,723 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.11.0
+2 info using node@v24.14.1
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\work\resume_portfolio\portfolio_website\astro\.npmrc
+5 silly config load:file:C:\Users\user\.npmrc
+6 silly config load:file:C:\Users\user\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm uninstall @astrojs/preact @astrojs/rss preact
+8 verbose argv "uninstall" "@astrojs/preact" "@astrojs/rss" "preact" "--cache" ".npm-cache"
+9 verbose logfile logs-max:10 dir:C:\work\resume_portfolio\portfolio_website\astro\.npm-cache\_logs\2026-04-11T09_39_57_971Z-
+10 verbose logfile C:\work\resume_portfolio\portfolio_website\astro\.npm-cache\_logs\2026-04-11T09_39_57_971Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly reify mark retired [
+14 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@astrojs\\preact'
+14 silly reify ]
+15 silly reify mark retired [
+15 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@astrojs\\rss'
+15 silly reify ]
+16 silly reify mark retired [
+16 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\code-frame'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\compat-data'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\core'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\generator'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-annotate-as-pure'
+20 silly reify ]
+21 silly reify mark retired [
+21 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-compilation-targets'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-globals'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-module-imports'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-module-transforms'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-plugin-utils'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-validator-option'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helpers'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\plugin-syntax-jsx'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\plugin-transform-react-jsx'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\plugin-transform-react-jsx-development'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\template'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\traverse'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\gen-mapping'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\remapping'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\resolve-uri'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\trace-mapping'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\preset-vite'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\signals'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\signals-core'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\babel-plugin'
+40 silly reify ]
+41 silly reify mark retired [
+41 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\core'
+41 silly reify ]
+42 silly reify mark retired [
+42 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\utils'
+42 silly reify ]
+43 silly reify mark retired [
+43 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\vite'
+43 silly reify ]
+44 silly reify mark retired [
+44 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\babel-plugin-transform-hook-names'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\baseline-browser-mapping',
+45 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\baseline-browser-mapping',
+45 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\baseline-browser-mapping.cmd',
+45 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\baseline-browser-mapping.ps1'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\browserslist',
+46 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\browserslist',
+46 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\browserslist.cmd',
+46 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\browserslist.ps1'
+46 silly reify ]
+47 silly reify mark retired [
+47 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\caniuse-lite'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\convert-source-map'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\electron-to-chromium'
+49 silly reify ]
+50 silly reify mark retired [
+50 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\escalade'
+50 silly reify ]
+51 silly reify mark retired [
+51 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\fast-xml-builder'
+51 silly reify ]
+52 silly reify mark retired [
+52 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\fast-xml-parser',
+52 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\fxparser',
+52 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\fxparser.cmd',
+52 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\fxparser.ps1'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\gensync'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\he',
+54 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\he',
+54 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\he.cmd',
+54 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\he.ps1'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\js-tokens'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\jsesc',
+56 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\jsesc',
+56 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\jsesc.cmd',
+56 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\jsesc.ps1'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\json5',
+57 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\json5',
+57 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\json5.cmd',
+57 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\json5.ps1'
+57 silly reify ]
+58 silly reify mark retired [
+58 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\kolorist'
+58 silly reify ]
+59 silly reify mark retired [
+59 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\node-html-parser'
+59 silly reify ]
+60 silly reify mark retired [
+60 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\node-releases'
+60 silly reify ]
+61 silly reify mark retired [
+61 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\path-expression-matcher'
+61 silly reify ]
+62 silly reify mark retired [
+62 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\preact'
+62 silly reify ]
+63 silly reify mark retired [
+63 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\preact-render-to-string'
+63 silly reify ]
+64 silly reify mark retired [
+64 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\simple-code-frame'
+64 silly reify ]
+65 silly reify mark retired [
+65 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\source-map'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\stack-trace'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\strnum'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\update-browserslist-db',
+68 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\update-browserslist-db',
+68 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\update-browserslist-db.cmd',
+68 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\update-browserslist-db.ps1'
+68 silly reify ]
+69 silly reify mark retired [
+69 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\vite-prerender-plugin'
+69 silly reify ]
+70 silly reify mark retired [
+70 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\yallist'
+70 silly reify ]
+71 silly reify mark retired [
+71 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\zimmerframe'
+71 silly reify ]
+72 silly reify moves {
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@astrojs\\preact': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@astrojs\\.preact-JAJMvITn',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@astrojs\\rss': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@astrojs\\.rss-CjZvrBeA',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\code-frame': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.code-frame-F5xTgf1b',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\compat-data': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.compat-data-ABVM2UFi',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\core': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.core-S7NHL6x2',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\generator': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.generator-eCR4V53d',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-annotate-as-pure': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.helper-annotate-as-pure-iGuTD0Ve',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-compilation-targets': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.helper-compilation-targets-QVoQLbEL',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-globals': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.helper-globals-VVTOR2XA',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-module-imports': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.helper-module-imports-MC9zPP6P',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-module-transforms': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.helper-module-transforms-hIlUObht',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-plugin-utils': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.helper-plugin-utils-mroRa2Vr',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helper-validator-option': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.helper-validator-option-VcYMDGEY',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\helpers': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.helpers-3b3nDNjf',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\plugin-syntax-jsx': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.plugin-syntax-jsx-pdoQIOoh',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\plugin-transform-react-jsx': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.plugin-transform-react-jsx-VY1M70LW',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\plugin-transform-react-jsx-development': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.plugin-transform-react-jsx-development-PWx3P3Oq',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\template': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.template-dAj3xMyj',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\traverse': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@babel\\.traverse-vEEArImP',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\gen-mapping': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\.gen-mapping-ksCT9uLE',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\remapping': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\.remapping-PxynCOsA',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\resolve-uri': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\.resolve-uri-rlN8cHUo',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\trace-mapping': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@jridgewell\\.trace-mapping-UvRpE1dN',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\preset-vite': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\.preset-vite-5EGwnmyX',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\signals': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\.signals-wtlnHYj3',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\signals-core': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@preact\\.signals-core-PEfAwUCI',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\babel-plugin': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\.babel-plugin-OHLf2L8n',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\core': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\.core-89jTJSQM',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\utils': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\.utils-WtSLqgiB',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\vite': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\@prefresh\\.vite-thkiWP1P',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\babel-plugin-transform-hook-names': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.babel-plugin-transform-hook-names-0NsVOIq2',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\baseline-browser-mapping': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.baseline-browser-mapping-fHf0IHIN',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\baseline-browser-mapping': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.baseline-browser-mapping-kLW2bv9r',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\baseline-browser-mapping.cmd': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.baseline-browser-mapping.cmd-zg9L6w3M',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\baseline-browser-mapping.ps1': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.baseline-browser-mapping.ps1-j6wjxxs8',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\browserslist': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.browserslist-PLXO2bUw',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\browserslist': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.browserslist-SKw4PBy6',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\browserslist.cmd': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.browserslist.cmd-q8ObsBnV',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\browserslist.ps1': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.browserslist.ps1-qNozxwPg',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\caniuse-lite': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.caniuse-lite-atYbBXD3',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\convert-source-map': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.convert-source-map-mycqiPKr',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\electron-to-chromium': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.electron-to-chromium-sOJ8bkHY',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\escalade': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.escalade-LCkznFro',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\fast-xml-builder': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.fast-xml-builder-TlY3Z9Rz',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\fast-xml-parser': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.fast-xml-parser-27h3Rt1s',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\fxparser': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.fxparser-jeAHHgIF',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\fxparser.cmd': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.fxparser.cmd-IOm950VI',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\fxparser.ps1': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.fxparser.ps1-EoNTE4AL',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\gensync': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.gensync-LhHaSdoG',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\he': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.he-zol29bYC',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\he': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.he-yv6bRclv',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\he.cmd': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.he.cmd-nJnwSRfj',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\he.ps1': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.he.ps1-CfOXSp5O',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\js-tokens': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.js-tokens-YhfaPsYN',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\jsesc': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.jsesc-vZLUFOjq',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\jsesc': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.jsesc-ox3L8C2j',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\jsesc.cmd': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.jsesc.cmd-CYMD00QK',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\jsesc.ps1': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.jsesc.ps1-MFdRWrOV',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\json5': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.json5-LIUOzuVv',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\json5': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.json5-OsFcwqPI',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\json5.cmd': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.json5.cmd-vszfxrEl',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\json5.ps1': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.json5.ps1-F0kK7dDz',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\kolorist': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.kolorist-tgenLojl',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\node-html-parser': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.node-html-parser-BcnlEhlk',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\node-releases': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.node-releases-5YBUE07O',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\path-expression-matcher': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.path-expression-matcher-6PBH7gDz',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\preact': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.preact-JRX7ytAY',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\preact-render-to-string': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.preact-render-to-string-eVZWiETk',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\simple-code-frame': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.simple-code-frame-SkNFqzqf',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\source-map': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.source-map-2zyMNAqP',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\stack-trace': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.stack-trace-keDVSO9e',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\strnum': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.strnum-t3JtiiyP',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\update-browserslist-db': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.update-browserslist-db-3U2cJSQX',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\update-browserslist-db': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.update-browserslist-db-598hUTvi',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\update-browserslist-db.cmd': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.update-browserslist-db.cmd-AUa3k3bc',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\update-browserslist-db.ps1': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.bin\\.update-browserslist-db.ps1-KAL5XwFa',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\vite-prerender-plugin': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.vite-prerender-plugin-ux4WXytJ',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\yallist': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.yallist-olxcUlCm',
+72 silly reify   'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\zimmerframe': 'C:\\work\\resume_portfolio\\portfolio_website\\astro\\node_modules\\.zimmerframe-fvozycDB'
+72 silly reify }
+73 silly audit bulk request {
+73 silly audit   '@astrojs/compiler': [ '3.0.1' ],
+73 silly audit   '@astrojs/internal-helpers': [ '0.8.0' ],
+73 silly audit   '@astrojs/markdown-remark': [ '7.1.0' ],
+73 silly audit   '@astrojs/prism': [ '4.0.1' ],
+73 silly audit   '@astrojs/telemetry': [ '3.3.0' ],
+73 silly audit   semver: [ '7.7.4' ],
+73 silly audit   'lru-cache': [ '11.2.7' ],
+73 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+73 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+73 silly audit   '@babel/parser': [ '7.29.2' ],
+73 silly audit   '@babel/types': [ '7.29.0' ],
+73 silly audit   '@capsizecss/unpack': [ '4.0.0' ],
+73 silly audit   '@clack/core': [ '1.2.0' ],
+73 silly audit   '@clack/prompts': [ '1.2.0' ],
+73 silly audit   '@emnapi/runtime': [ '1.9.2' ],
+73 silly audit   '@esbuild/aix-ppc64': [ '0.27.7' ],
+73 silly audit   '@esbuild/android-arm': [ '0.27.7' ],
+73 silly audit   '@esbuild/android-arm64': [ '0.27.7' ],
+73 silly audit   '@esbuild/android-x64': [ '0.27.7' ],
+73 silly audit   '@esbuild/darwin-arm64': [ '0.27.7' ],
+73 silly audit   '@esbuild/darwin-x64': [ '0.27.7' ],
+73 silly audit   '@esbuild/freebsd-arm64': [ '0.27.7' ],
+73 silly audit   '@esbuild/freebsd-x64': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-arm': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-arm64': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-ia32': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-loong64': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-mips64el': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-ppc64': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-riscv64': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-s390x': [ '0.27.7' ],
+73 silly audit   '@esbuild/linux-x64': [ '0.27.7' ],
+73 silly audit   '@esbuild/netbsd-arm64': [ '0.27.7' ],
+73 silly audit   '@esbuild/netbsd-x64': [ '0.27.7' ],
+73 silly audit   '@esbuild/openbsd-arm64': [ '0.27.7' ],
+73 silly audit   '@esbuild/openbsd-x64': [ '0.27.7' ],
+73 silly audit   '@esbuild/openharmony-arm64': [ '0.27.7' ],
+73 silly audit   '@esbuild/sunos-x64': [ '0.27.7' ],
+73 silly audit   '@esbuild/win32-arm64': [ '0.27.7' ],
+73 silly audit   '@esbuild/win32-ia32': [ '0.27.7' ],
+73 silly audit   '@esbuild/win32-x64': [ '0.27.7' ],
+73 silly audit   '@img/colour': [ '1.1.0' ],
+73 silly audit   '@img/sharp-darwin-arm64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-darwin-x64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.4' ],
+73 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.4' ],
+73 silly audit   '@img/sharp-linux-arm': [ '0.34.5' ],
+73 silly audit   '@img/sharp-linux-arm64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-linux-ppc64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-linux-riscv64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-linux-s390x': [ '0.34.5' ],
+73 silly audit   '@img/sharp-linux-x64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-wasm32': [ '0.34.5' ],
+73 silly audit   '@img/sharp-win32-arm64': [ '0.34.5' ],
+73 silly audit   '@img/sharp-win32-ia32': [ '0.34.5' ],
+73 silly audit   '@img/sharp-win32-x64': [ '0.34.5' ],
+73 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+73 silly audit   '@oslojs/encoding': [ '1.1.0' ],
+73 silly audit   '@rollup/pluginutils': [ '5.3.0' ],
+73 silly audit   picomatch: [ '2.3.2', '4.0.4' ],
+73 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-android-arm64': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-darwin-arm64': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-darwin-x64': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-freebsd-x64': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-loong64-musl': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-ppc64-musl': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-openbsd-x64': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.60.1' ],
+73 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.60.1' ],
+73 silly audit   '@shikijs/core': [ '4.0.2' ],
+73 silly audit   '@shikijs/engine-javascript': [ '4.0.2' ],
+73 silly audit   '@shikijs/engine-oniguruma': [ '4.0.2' ],
+73 silly audit   '@shikijs/langs': [ '4.0.2' ],
+73 silly audit   '@shikijs/primitive': [ '4.0.2' ],
+73 silly audit   '@shikijs/themes': [ '4.0.2' ],
+73 silly audit   '@shikijs/types': [ '4.0.2' ],
+73 silly audit   '@shikijs/vscode-textmate': [ '10.0.2' ],
+73 silly audit   '@types/debug': [ '4.1.13' ],
+73 silly audit   '@types/estree': [ '1.0.8' ],
+73 silly audit   '@types/hast': [ '3.0.4' ],
+73 silly audit   '@types/mdast': [ '4.0.4' ],
+73 silly audit   '@types/ms': [ '2.1.0' ],
+73 silly audit   '@types/nlcst': [ '2.0.3' ],
+73 silly audit   '@types/unist': [ '3.0.3' ],
+73 silly audit   '@ungap/structured-clone': [ '1.3.0' ],
+73 silly audit   anymatch: [ '3.1.3' ],
+73 silly audit   argparse: [ '2.0.1' ],
+73 silly audit   'aria-query': [ '5.3.2' ],
+73 silly audit   'array-iterate': [ '2.0.1' ],
+73 silly audit   astro: [ '6.1.5' ],
+73 silly audit   'axobject-query': [ '4.1.0' ],
+73 silly audit   bail: [ '2.0.2' ],
+73 silly audit   boolbase: [ '1.0.0' ],
+73 silly audit   ccount: [ '2.0.1' ],
+73 silly audit   'character-entities': [ '2.0.2' ],
+73 silly audit   'character-entities-html4': [ '2.1.0' ],
+73 silly audit   'character-entities-legacy': [ '3.0.0' ],
+73 silly audit   chokidar: [ '5.0.0' ],
+73 silly audit   'ci-info': [ '4.4.0' ],
+73 silly audit   clsx: [ '2.1.1' ],
+73 silly audit   'comma-separated-tokens': [ '2.0.3' ],
+73 silly audit   commander: [ '11.1.0' ],
+73 silly audit   'common-ancestor-path': [ '2.0.0' ],
+73 silly audit   cookie: [ '1.1.1' ],
+73 silly audit   'cookie-es': [ '1.2.3' ],
+73 silly audit   crossws: [ '0.3.5' ],
+73 silly audit   'css-select': [ '5.2.2' ],
+73 silly audit   'css-tree': [ '3.2.1', '2.2.1' ],
+73 silly audit   'css-what': [ '6.2.2' ],
+73 silly audit   csso: [ '5.0.5' ],
+73 silly audit   'mdn-data': [ '2.0.28', '2.27.1' ],
+73 silly audit   debug: [ '4.4.3' ],
+73 silly audit   'decode-named-character-reference': [ '1.3.0' ],
+73 silly audit   defu: [ '6.1.6' ],
+73 silly audit   dequal: [ '2.0.3' ],
+73 silly audit   destr: [ '2.0.5' ],
+73 silly audit   'detect-libc': [ '2.1.2' ],
+73 silly audit   devalue: [ '5.6.4' ],
+73 silly audit   devlop: [ '1.1.0' ],
+73 silly audit   diff: [ '8.0.4' ],
+73 silly audit   dlv: [ '1.1.3' ],
+73 silly audit   'dom-serializer': [ '2.0.0' ],
+73 silly audit   entities: [ '4.5.0', '6.0.1' ],
+73 silly audit   domelementtype: [ '2.3.0' ],
+73 silly audit   domhandler: [ '5.0.3' ],
+73 silly audit   domutils: [ '3.2.2' ],
+73 silly audit   dset: [ '3.1.4' ],
+73 silly audit   'es-module-lexer': [ '2.0.0' ],
+73 silly audit   esbuild: [ '0.27.7' ],
+73 silly audit   'escape-string-regexp': [ '5.0.0' ],
+73 silly audit   'estree-walker': [ '2.0.2' ],
+73 silly audit   eventemitter3: [ '5.0.4' ],
+73 silly audit   extend: [ '3.0.2' ],
+73 silly audit   'fast-string-truncated-width': [ '1.2.1' ],
+73 silly audit   'fast-string-width': [ '1.1.0' ],
+73 silly audit   'fast-wrap-ansi': [ '0.1.6' ],
+73 silly audit   fdir: [ '6.5.0' ],
+73 silly audit   flattie: [ '1.1.1' ],
+73 silly audit   fontace: [ '0.4.1' ],
+73 silly audit   fontkitten: [ '1.0.3' ],
+73 silly audit   fsevents: [ '2.3.3' ],
+73 silly audit   'github-slugger': [ '2.0.0' ],
+73 silly audit   h3: [ '1.15.11' ],
+73 silly audit   'hast-util-from-html': [ '2.0.3' ],
+73 silly audit   'hast-util-from-parse5': [ '8.0.3' ],
+73 silly audit   'hast-util-is-element': [ '3.0.0' ],
+73 silly audit   'hast-util-parse-selector': [ '4.0.0' ],
+73 silly audit   'hast-util-raw': [ '9.1.0' ],
+73 silly audit   'hast-util-to-html': [ '9.0.5' ],
+73 silly audit   'hast-util-to-parse5': [ '8.0.1' ],
+73 silly audit   'hast-util-to-text': [ '4.0.2' ],
+73 silly audit   'hast-util-whitespace': [ '3.0.0' ],
+73 silly audit   hastscript: [ '9.0.1' ],
+73 silly audit   'html-escaper': [ '3.0.3' ],
+73 silly audit   'html-void-elements': [ '3.0.0' ],
+73 silly audit   'http-cache-semantics': [ '4.2.0' ],
+73 silly audit   'iron-webcrypto': [ '1.2.1' ],
+73 silly audit   'is-docker': [ '3.0.0' ],
+73 silly audit   'is-inside-container': [ '1.0.0' ],
+73 silly audit   'is-plain-obj': [ '4.1.0' ],
+73 silly audit   'is-wsl': [ '3.1.1' ],
+73 silly audit   'js-yaml': [ '4.1.1' ],
+73 silly audit   'longest-streak': [ '3.1.0' ],
+73 silly audit   'magic-string': [ '0.30.21' ],
+73 silly audit   magicast: [ '0.5.2' ],
+73 silly audit   'markdown-table': [ '3.0.4' ],
+73 silly audit   'mdast-util-definitions': [ '6.0.0' ],
+73 silly audit   'mdast-util-find-and-replace': [ '3.0.2' ],
+73 silly audit   'mdast-util-from-markdown': [ '2.0.3' ],
+73 silly audit   'mdast-util-gfm': [ '3.1.0' ],
+73 silly audit   'mdast-util-gfm-autolink-literal': [ '2.0.1' ],
+73 silly audit   'mdast-util-gfm-footnote': [ '2.1.0' ],
+73 silly audit   'mdast-util-gfm-strikethrough': [ '2.0.0' ],
+73 silly audit   'mdast-util-gfm-table': [ '2.0.0' ],
+73 silly audit   'mdast-util-gfm-task-list-item': [ '2.0.0' ],
+73 silly audit   'mdast-util-phrasing': [ '4.1.0' ],
+73 silly audit   'mdast-util-to-hast': [ '13.2.1' ],
+73 silly audit   'mdast-util-to-markdown': [ '2.1.2' ],
+73 silly audit   'mdast-util-to-string': [ '4.0.0' ],
+73 silly audit   micromark: [ '4.0.2' ],
+73 silly audit   'micromark-core-commonmark': [ '2.0.3' ],
+73 silly audit   'micromark-extension-gfm': [ '3.0.0' ],
+73 silly audit   'micromark-extension-gfm-autolink-literal': [ '2.1.0' ],
+73 silly audit   'micromark-extension-gfm-footnote': [ '2.1.0' ],
+73 silly audit   'micromark-extension-gfm-strikethrough': [ '2.1.0' ],
+73 silly audit   'micromark-extension-gfm-table': [ '2.1.1' ],
+73 silly audit   'micromark-extension-gfm-tagfilter': [ '2.0.0' ],
+73 silly audit   'micromark-extension-gfm-task-list-item': [ '2.1.0' ],
+73 silly audit   'micromark-factory-destination': [ '2.0.1' ],
+73 silly audit   'micromark-factory-label': [ '2.0.1' ],
+73 silly audit   'micromark-factory-space': [ '2.0.1' ],
+73 silly audit   'micromark-factory-title': [ '2.0.1' ],
+73 silly audit   'micromark-factory-whitespace': [ '2.0.1' ],
+73 silly audit   'micromark-util-character': [ '2.1.1' ],
+73 silly audit   'micromark-util-chunked': [ '2.0.1' ],
+73 silly audit   'micromark-util-classify-character': [ '2.0.1' ],
+73 silly audit   'micromark-util-combine-extensions': [ '2.0.1' ],
+73 silly audit   'micromark-util-decode-numeric-character-reference': [ '2.0.2' ],
+73 silly audit   'micromark-util-decode-string': [ '2.0.1' ],
+73 silly audit   'micromark-util-encode': [ '2.0.1' ],
+73 silly audit   'micromark-util-html-tag-name': [ '2.0.1' ],
+73 silly audit   'micromark-util-normalize-identifier': [ '2.0.1' ],
+73 silly audit   'micromark-util-resolve-all': [ '2.0.1' ],
+73 silly audit   'micromark-util-sanitize-uri': [ '2.0.1' ],
+73 silly audit   'micromark-util-subtokenize': [ '2.1.0' ],
+73 silly audit   'micromark-util-symbol': [ '2.0.1' ],
+73 silly audit   'micromark-util-types': [ '2.0.2' ],
+73 silly audit   mrmime: [ '2.0.1' ],
+73 silly audit   ms: [ '2.1.3' ],
+73 silly audit   nanoid: [ '3.3.11' ],
+73 silly audit   neotraverse: [ '0.6.18' ],
+73 silly audit   'nlcst-to-string': [ '4.0.0' ],
+73 silly audit   'node-fetch-native': [ '1.6.7' ],
+73 silly audit   'node-mock-http': [ '1.0.4' ],
+73 silly audit   'normalize-path': [ '3.0.0' ],
+73 silly audit   'nth-check': [ '2.1.1' ],
+73 silly audit   obug: [ '2.1.1' ],
+73 silly audit   ofetch: [ '1.5.1' ],
+73 silly audit   ohash: [ '2.0.11' ],
+73 silly audit   'oniguruma-parser': [ '0.12.1' ],
+73 silly audit   'oniguruma-to-es': [ '4.3.5' ],
+73 silly audit   'p-limit': [ '7.3.0' ],
+73 silly audit   'p-queue': [ '9.1.1' ],
+73 silly audit   'p-timeout': [ '7.0.1' ],
+73 silly audit   'package-manager-detector': [ '1.6.0' ],
+73 silly audit   'parse-latin': [ '7.0.0' ],
+73 silly audit   parse5: [ '7.3.0' ],
+73 silly audit   piccolore: [ '0.1.3' ],
+73 silly audit   picocolors: [ '1.1.1' ],
+73 silly audit   postcss: [ '8.5.8' ],
+73 silly audit   prismjs: [ '1.30.0' ],
+73 silly audit   'property-information': [ '7.1.0' ],
+73 silly audit   radix3: [ '1.1.2' ],
+73 silly audit   readdirp: [ '5.0.0' ],
+73 silly audit   regex: [ '6.1.0' ],
+73 silly audit   'regex-recursion': [ '6.0.2' ],
+73 silly audit   'regex-utilities': [ '2.3.0' ],
+73 silly audit   rehype: [ '13.0.2' ],
+73 silly audit   'rehype-parse': [ '9.0.1' ],
+73 silly audit   'rehype-raw': [ '7.0.0' ],
+73 silly audit   'rehype-stringify': [ '10.0.1' ],
+73 silly audit   'remark-gfm': [ '4.0.1' ],
+73 silly audit   'remark-parse': [ '11.0.0' ],
+73 silly audit   'remark-rehype': [ '11.1.2' ],
+73 silly audit   'remark-smartypants': [ '3.0.2' ],
+73 silly audit   'remark-stringify': [ '11.0.0' ],
+73 silly audit   retext: [ '9.0.0' ],
+73 silly audit   'retext-latin': [ '4.0.0' ],
+73 silly audit   'retext-smartypants': [ '6.2.0' ],
+73 silly audit   'retext-stringify': [ '4.0.0' ],
+73 silly audit   rollup: [ '4.60.1' ],
+73 silly audit   sax: [ '1.6.0' ],
+73 silly audit   sharp: [ '0.34.5' ],
+73 silly audit   shiki: [ '4.0.2' ],
+73 silly audit   sisteransi: [ '1.0.5' ],
+73 silly audit   'smol-toml': [ '1.6.1' ],
+73 silly audit   'source-map-js': [ '1.2.1' ],
+73 silly audit   'space-separated-tokens': [ '2.0.2' ],
+73 silly audit   'stringify-entities': [ '4.0.4' ],
+73 silly audit   svgo: [ '4.0.1' ],
+73 silly audit   'tiny-inflate': [ '1.0.3' ],
+73 silly audit   tinyclip: [ '0.1.12' ],
+73 silly audit   tinyexec: [ '1.0.4' ],
+73 silly audit   tinyglobby: [ '0.2.15' ],
+73 silly audit   'trim-lines': [ '3.0.1' ],
+73 silly audit   trough: [ '2.2.0' ],
+73 silly audit   tsconfck: [ '3.1.6' ],
+73 silly audit   tslib: [ '2.8.1' ],
+73 silly audit   ufo: [ '1.6.3' ],
+73 silly audit   ultrahtml: [ '1.6.0' ],
+73 silly audit   uncrypto: [ '0.1.3' ],
+73 silly audit   unified: [ '11.0.5' ],
+73 silly audit   unifont: [ '0.7.4' ],
+73 silly audit   'unist-util-find-after': [ '5.0.0' ],
+73 silly audit   'unist-util-is': [ '6.0.1' ],
+73 silly audit   'unist-util-modify-children': [ '4.0.0' ],
+73 silly audit   'unist-util-position': [ '5.0.0' ],
+73 silly audit   'unist-util-remove-position': [ '5.0.0' ],
+73 silly audit   'unist-util-stringify-position': [ '4.0.0' ],
+73 silly audit   'unist-util-visit': [ '5.1.0' ],
+73 silly audit   'unist-util-visit-children': [ '3.0.0' ],
+73 silly audit   'unist-util-visit-parents': [ '6.0.2' ],
+73 silly audit   unstorage: [ '1.17.5' ],
+73 silly audit   vfile: [ '6.0.3' ],
+73 silly audit   'vfile-location': [ '5.0.3' ],
+73 silly audit   'vfile-message': [ '4.0.3' ],
+73 silly audit   vite: [ '7.3.1' ],
+73 silly audit   vitefu: [ '1.1.3' ],
+73 silly audit   'web-namespaces': [ '2.0.1' ],
+73 silly audit   'which-pm-runs': [ '1.1.0' ],
+73 silly audit   'xxhash-wasm': [ '1.1.0' ],
+73 silly audit   'yargs-parser': [ '22.0.0' ],
+73 silly audit   'yocto-queue': [ '1.2.2' ],
+73 silly audit   zod: [ '4.3.6' ],
+73 silly audit   zwitch: [ '2.0.4' ]
+73 silly audit }
+74 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 329ms
+75 silly audit report {
+75 silly audit report   vite: [
+75 silly audit report     {
+75 silly audit report       id: 1116230,
+75 silly audit report       url: 'https://github.com/advisories/GHSA-4w7w-66w2-5vf9',
+75 silly audit report       title: 'Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling',
+75 silly audit report       severity: 'moderate',
+75 silly audit report       vulnerable_versions: '>=7.0.0 <=7.3.1',
+75 silly audit report       cwe: [Array],
+75 silly audit report       cvss: [Object]
+75 silly audit report     },
+75 silly audit report     {
+75 silly audit report       id: 1116232,
+75 silly audit report       url: 'https://github.com/advisories/GHSA-v2wj-q39q-566r',
+75 silly audit report       title: 'Vite: `server.fs.deny` bypassed with queries',
+75 silly audit report       severity: 'high',
+75 silly audit report       vulnerable_versions: '>=7.1.0 <=7.3.1',
+75 silly audit report       cwe: [Array],
+75 silly audit report       cvss: [Object]
+75 silly audit report     },
+75 silly audit report     {
+75 silly audit report       id: 1116235,
+75 silly audit report       url: 'https://github.com/advisories/GHSA-p9ff-h696-f583',
+75 silly audit report       title: 'Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket',
+75 silly audit report       severity: 'high',
+75 silly audit report       vulnerable_versions: '>=7.0.0 <=7.3.1',
+75 silly audit report       cwe: [Array],
+75 silly audit report       cvss: [Object]
+75 silly audit report     }
+75 silly audit report   ]
+75 silly audit report }
+76 silly packumentCache corgi:https://registry.npmjs.org/vite cache-miss
+77 http fetch GET 200 https://registry.npmjs.org/vite 56ms (cache revalidated)
+78 silly packumentCache corgi:https://registry.npmjs.org/vite set size:2229030 disposed:false
+79 silly packumentCache corgi:https://registry.npmjs.org/astro cache-miss
+80 silly packumentCache corgi:https://registry.npmjs.org/vitefu cache-miss
+81 http fetch GET 200 https://registry.npmjs.org/vitefu 217ms (cache revalidated)
+82 silly packumentCache corgi:https://registry.npmjs.org/vitefu set size:22407 disposed:false
+83 http fetch GET 200 https://registry.npmjs.org/astro 315ms (cache revalidated)
+84 silly packumentCache corgi:https://registry.npmjs.org/astro set size:4336727 disposed:false
+85 silly REMOVE node_modules/zimmerframe
+86 silly REMOVE node_modules/yallist
+87 silly REMOVE node_modules/vite-prerender-plugin
+88 silly REMOVE node_modules/update-browserslist-db
+89 silly REMOVE node_modules/strnum
+90 silly REMOVE node_modules/stack-trace
+91 silly REMOVE node_modules/source-map
+92 silly REMOVE node_modules/simple-code-frame
+93 silly REMOVE node_modules/preact-render-to-string
+94 silly REMOVE node_modules/preact
+95 silly REMOVE node_modules/path-expression-matcher
+96 silly REMOVE node_modules/node-releases
+97 silly REMOVE node_modules/node-html-parser
+98 silly REMOVE node_modules/kolorist
+99 silly REMOVE node_modules/json5
+100 silly REMOVE node_modules/jsesc
+101 silly REMOVE node_modules/js-tokens
+102 silly REMOVE node_modules/he
+103 silly REMOVE node_modules/gensync
+104 silly REMOVE node_modules/fast-xml-parser
+105 silly REMOVE node_modules/fast-xml-builder
+106 silly REMOVE node_modules/escalade
+107 silly REMOVE node_modules/electron-to-chromium
+108 silly REMOVE node_modules/convert-source-map
+109 silly REMOVE node_modules/caniuse-lite
+110 silly REMOVE node_modules/browserslist
+111 silly REMOVE node_modules/baseline-browser-mapping
+112 silly REMOVE node_modules/babel-plugin-transform-hook-names
+113 silly REMOVE node_modules/@prefresh/vite
+114 silly REMOVE node_modules/@prefresh/vite/node_modules/picomatch
+115 silly REMOVE node_modules/@prefresh/vite/node_modules/@rollup/pluginutils
+116 silly REMOVE node_modules/@prefresh/utils
+117 silly REMOVE node_modules/@prefresh/core
+118 silly REMOVE node_modules/@prefresh/babel-plugin
+119 silly REMOVE node_modules/@preact/signals-core
+120 silly REMOVE node_modules/@preact/signals
+121 silly REMOVE node_modules/@preact/preset-vite
+122 silly REMOVE node_modules/@jridgewell/trace-mapping
+123 silly REMOVE node_modules/@jridgewell/resolve-uri
+124 silly REMOVE node_modules/@jridgewell/remapping
+125 silly REMOVE node_modules/@jridgewell/gen-mapping
+126 silly REMOVE node_modules/@babel/traverse
+127 silly REMOVE node_modules/@babel/template
+128 silly REMOVE node_modules/@babel/plugin-transform-react-jsx-development
+129 silly REMOVE node_modules/@babel/plugin-transform-react-jsx
+130 silly REMOVE node_modules/@babel/plugin-syntax-jsx
+131 silly REMOVE node_modules/@babel/helpers
+132 silly REMOVE node_modules/@babel/helper-validator-option
+133 silly REMOVE node_modules/@babel/helper-plugin-utils
+134 silly REMOVE node_modules/@babel/helper-module-transforms
+135 silly REMOVE node_modules/@babel/helper-module-imports
+136 silly REMOVE node_modules/@babel/helper-globals
+137 silly REMOVE node_modules/@babel/helper-compilation-targets
+138 silly REMOVE node_modules/@babel/helper-compilation-targets/node_modules/semver
+139 silly REMOVE node_modules/@babel/helper-compilation-targets/node_modules/lru-cache
+140 silly REMOVE node_modules/@babel/helper-annotate-as-pure
+141 silly REMOVE node_modules/@babel/generator
+142 silly REMOVE node_modules/@babel/core
+143 silly REMOVE node_modules/@babel/core/node_modules/semver
+144 silly REMOVE node_modules/@babel/compat-data
+145 silly REMOVE node_modules/@babel/code-frame
+146 silly REMOVE node_modules/@astrojs/rss
+147 silly REMOVE node_modules/@astrojs/preact
+148 verbose cwd C:\work\resume_portfolio\portfolio_website\astro
+149 verbose os Windows_NT 10.0.22621
+150 verbose node v24.14.1
+151 verbose npm  v11.11.0
+152 verbose exit 0
+153 info ok

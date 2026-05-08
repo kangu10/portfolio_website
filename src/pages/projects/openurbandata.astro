@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = 'Open Urban Data catalogue';
+---
+<BaseLayout pageTitle={pageTitle}>
+  <article class="project-detail">
+    <div class="project-detail-hero">
+      <div class="project-detail-copy">
+        <p class="project-summary">
+          Open Urban Data is a catalogue of data sources useful for urban analysis in Russia.
+        </p>
+        <p class="project-summary">
+          <a href="https://openurbandata.ru/" target="_blank" rel="noopener noreferrer">
+            Visit the Open Urban Data catalogue (in Russian only)
+          </a>
+        </p>
+        <div class="project-facts">
+        </div>
+      </div>
+    </div>
+
+    <div class="project-richtext">
+      <h2>Overview</h2>
+      <p>
+        The catalogue was created by a team of 9 urban researchers and planners (including me) and compiles over 200 data sources that can be highly useful for analyses. My contribution was adding, describing and classifying a part of the sources (mostly global spatial datasets).
+      </p>
+    </div>
+  </article>
+</BaseLayout>

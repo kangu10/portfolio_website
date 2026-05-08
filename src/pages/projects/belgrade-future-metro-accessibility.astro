@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = 'Belgrade Future Metro Accessibility Map';
+---
+<BaseLayout pageTitle={pageTitle}>
+  <article class="project-detail">
+    <div class="project-detail-hero">
+      <div class="project-detail-copy">
+        <!-- <p class="project-summary">
+          An interactive web map showing walking accessibility to proposed metro stations in Belgrade, Serbia.
+        </p> -->
+        <div class="project-facts">
+          <p>Interactive map</p>
+          <p>2025</p>
+          <p>Python, JavaScript</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="project-tags">
+      <span class="project-tag">interactive map</span>
+    </div> -->
+
+    <div class="project-richtext">
+      <h2>Overview</h2>
+      <p>
+        This map shows proposed metro stations in Belgrade, along with their walking accessibility areas (5, 10, and 15 minutes). 
+        Additionally, each area includes a population estimate, available by clicking on a station.
+        The station locations are taken from the Development plans as of January 2025.
+        I used Daniel Gorokhov's Python and PostGIS code to calculate the isochrones.
+        The population data comes from GHSL.
+      </p>
+      <p>
+        <a href="https://kangu10.github.io/belgrade_metro_map/" target="_blank" rel="noopener noreferrer">
+          View the interactive Belgrade metro accessibility map
+        </a>
+      </p>
+    </div>
+    
+    <div class="project-embed project-embed-wide">
+      <iframe
+        src="https://kangu10.github.io/belgrade_metro_map/"
+        title="Belgrade Future Metro Accessibility Map"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    
+  </article>
+</BaseLayout>

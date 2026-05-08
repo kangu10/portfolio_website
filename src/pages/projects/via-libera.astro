@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = 'Via Libera project';
+---
+<BaseLayout pageTitle={pageTitle}>
+  <article class="project-detail">
+    <div class="project-detail-hero">
+      <div class="project-detail-copy">
+        <!-- <p class="project-summary">
+          Illegal parking analysis in Milan.
+        </p> -->
+        <div class="project-facts">
+          <p>Research case study</p>
+          <p>2024</p>
+          <p>QGIS, Python</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-richtext">
+      <h2>Overview</h2>
+      <p>
+        The Via Libera report documents a large-scale collective mapping effort in Milan on May 16, 2024. Around 2,000 volunteers recorded 63,990 illegally parked cars. I was responsible for data cleaning and map visualization.
+      </p>
+      <p>
+        <a href="https://www.saichepuoi.it/wp-content/uploads/2024/09/report-vialibera.pdf" target="_blank" rel="noopener noreferrer">
+          Read the Via Libera report
+        </a>
+      </p>
+
+      <!-- <h2>Map gallery</h2> -->
+      <div class="project-gallery-shell">
+        <button class="project-gallery-arrow project-gallery-arrow-prev" type="button" aria-label="Previous map">
+          &larr;
+        </button>
+        <div class="project-gallery-viewport">
+          <div class="project-gallery" aria-label="Via Libera maps gallery">
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open map 1 larger">
+                <img
+                  src="/images/via-libera1.png"
+                  alt="Density of illegally parked cars on the total surface area of the street."
+                />
+              </button>
+              <figcaption>Density of illegally parked cars on the total surface area of the street.</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open map 2 larger">
+                <img
+                  src="/images/via-libera2.png"
+                  alt="The most parked streets along with PTAL and big parking locations in central Milan."
+                />
+              </button>
+              <figcaption>The most parked streets along with PTAL and big parking locations in central Milan.</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open map 3 larger">
+                <img
+                  src="/images/via-libera3.png"
+                  alt="Density of illegally parked cars on the surface of permeable areas pertaining to streets."
+                />
+              </button>
+              <figcaption>Density of illegally parked cars on the surface of permeable areas pertaining to streets.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="project-gallery-arrow project-gallery-arrow-next" type="button" aria-label="Next map">
+          &rarr;
+        </button>
+      </div>
+
+
+    </div>
+  </article>
+
+  <dialog class="project-lightbox" aria-label="Expanded Via Libera map view">
+    <div class="project-lightbox-panel">
+      <button class="project-lightbox-close" type="button" aria-label="Close expanded map">
+        &times;
+      </button>
+      <button class="project-lightbox-nav project-lightbox-prev" type="button" aria-label="Show previous map">
+        &larr;
+      </button>
+      <figure class="project-lightbox-figure">
+        <img class="project-lightbox-image" src="" alt="" />
+        <figcaption class="project-lightbox-caption"></figcaption>
+      </figure>
+      <button class="project-lightbox-nav project-lightbox-next" type="button" aria-label="Show next map">
+        &rarr;
+      </button>
+    </div>
+  </dialog>
+
+  <script>
+    import '../../scripts/project-gallery-embla.js';
+  </script>
+</BaseLayout>

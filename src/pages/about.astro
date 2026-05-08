@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'About me';
+const cvUrl = 'https://drive.google.com/file/d/1dvFmA0jEZtvLhuCf4CGzkzN55Wa0rEfO/view?usp=sharing';
+
+const workItems = [
+  {
+    period: '2023 - Present',
+    title: 'GIS Analyst',
+    organization: 'MIC-HUB',
+    url: 'https://mic-hub.com',
+    description:
+      'Provided GIS analysis for more than 20 urban and regional mobility planning projects. Developed a QGIS network analysis plugin for internal use.',
+  },
+  {
+    period: '2023',
+    title: 'Navigation Maps Editor',
+    organization: 'exit.design',
+    description:
+      'Prepared 50+ navigation maps and wayfinding schemes for Moscow Transport.',
+  },
+  {
+    period: '2022-2023',
+    title: 'Public Transit Data Analyst',
+    organization: 'MTP, Moscow',
+    description:
+      'Developed over 30 scenario-based transit models. Conducted geospatial analyses for major public transit projects in Moscow. Created Python scripts to automate departmental workflows.',
+  }
+]
+const educationItems = [
+  {
+    period: '2021-2023',
+    title: 'Master\'s degree in Urban Studies',
+    organization: 'Higher School of Economics, Moscow',
+    description: 'Studied urban theory and quantitative methods, applying GIS, spatial econometrics and R programming in coursework and independent research.',
+  },
+  {
+    period: '2017-2021',
+    title: 'Bachelor\'s degree in Regional Studies',
+    organization: 'Moscow State Linguistic University, Moscow',
+    description:
+      'Regional and cultural studies with a focus on Finland and the Finnish language.',
+  }
+];
+---
+<BaseLayout pageTitle={pageTitle}>
+  <section class="about-intro">
+    <p class="section-text">
+      Throughout my career, I've used GIS tools to solve different urban and transport planning problems.
+    </p>
+    <div class="about-actions">
+      <a class="button button-primary" href={cvUrl} target="_blank" rel="noopener noreferrer">
+        View my CV
+      </a>
+    </div>
+  </section>
+
+  <section class="timeline-section" aria-labelledby="workplaces-heading">
+    <div class="timeline-header">
+      <h2 id="workplaces-heading">Workplaces</h2>
+    </div>
+  
+    <div class="timeline">
+      {workItems.map((item) => (
+        <article class="timeline-item">
+          <p class="timeline-period">{item.period}</p>
+          <div class="timeline-content">
+            <h3>{item.title}</h3>
+            <p class="timeline-organization">
+              {item.url ? (
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  {item.organization}
+                </a>
+              ) : (
+                item.organization
+              )}
+            </p>
+            <p class="timeline-description">{item.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="timeline-section" aria-labelledby="education-heading">
+    <div class="timeline-header">
+      <h2 id="education-heading">Education</h2>
+    </div>
+  
+    <div class="timeline">
+      {educationItems.map((item) => (
+        <article class="timeline-item">
+          <p class="timeline-period">{item.period}</p>
+          <div class="timeline-content">
+            <h3>{item.title}</h3>
+            <p class="timeline-organization">{item.organization}</p>
+            <p class="timeline-description">{item.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,13 @@
+---
+const { showCue = false } = Astro.props;
+---
+<footer class="site-footer">
+  {showCue && (
+    <div class="footer-cue" aria-hidden="true">
+      <span>Locate me!</span>
+      <span class="footer-cue-arrow">-&gt;</span>
+    </div>
+  )}
+  <a href={`https://www.linkedin.com/in/sskotnikov/`}>LinkedIn</a>
+  <a href={`mailto:kangukangu10@gmail.com`}>Email</a>
+</footer>
