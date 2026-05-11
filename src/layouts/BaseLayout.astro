@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
 import '../styles/index.css';
 const { pageTitle } = Astro.props;
 ---
@@ -11,6 +12,7 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <Analytics />
     <style is:inline>
       .hero-copy::before,
       .page-heading::before {

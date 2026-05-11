@@ -3,6 +3,7 @@ const pageTitle = "Semyon Skotnikov";
 import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
 
 const tools = [
   'Python',
@@ -30,6 +31,7 @@ const skills = [
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <Analytics />
     <style is:inline>
       .hero-copy::before,
       .page-heading::before {
