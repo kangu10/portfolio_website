@@ -1,6 +1,6 @@
-# Portfolio Website
+# Semyon Skotnikov's Portfolio Website
 
-Astro portfolio site for showcasing geospatial and urban research projects.
+Semyon Skotnikov's portfolio site for showcasing geospatial and urban research projects.
 
 ## Commands
 
