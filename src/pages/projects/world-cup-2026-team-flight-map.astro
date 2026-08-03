@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = 'World Cup 2026 Team Flight Map';
+---
+<BaseLayout pageTitle={pageTitle}>
+  <article class="project-detail">
+    <div class="project-detail-hero">
+      <div class="project-detail-copy">
+        <div class="project-facts">
+          <p>Interactive map</p>
+          <p>2026</p>
+          <p>JavaScript, Mapbox GL JS</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-richtext">
+      <h2>Overview</h2>
+      <p>
+        This interactive map visualizes the flight routes of all 48 teams during the 2026 World Cup.
+        It lets users explore each team’s itinerary by tournament stage and compare total route
+        distance, estimated CO2e emissions, number of trips and match cities.
+      </p>
+      <p>
+        <a href="https://wc26.skotnikov.me/" target="_blank" rel="noopener noreferrer">
+          View the World Cup 2026 team flight map
+        </a>
+      </p>
+    </div>
+
+    <div class="project-embed project-embed-wide">
+      <iframe
+        src="https://wc26.skotnikov.me/"
+        title="World Cup 2026 Team Flight Map"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </article>
+</BaseLayout>

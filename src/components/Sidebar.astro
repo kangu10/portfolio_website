@@ -1,0 +1,34 @@
+---
+import SkillPlayground from './SkillPlayground.astro';
+
+const pathname = Astro.url.pathname;
+
+const links = [
+  { href: '/', label: 'Projects', isActive: pathname === '/' || pathname.startsWith('/projects') },
+  { href: '/about', label: 'About me', isActive: pathname.startsWith('/about') },
+];
+---
+<aside class="portfolio-sidebar">
+  <div>
+    <a class="sidebar-name" href="/">Semyon Skotnikov</a>
+    <p class="sidebar-role">GIS Analyst &amp; Urban Researcher</p>
+    <p class="sidebar-location">Based in Belgrade, Serbia</p>
+
+    <nav class="sidebar-navigation" aria-label="Primary">
+      {links.map((link) => (
+        <a href={link.href} aria-current={link.isActive ? 'page' : undefined}>
+          {link.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+
+  <SkillPlayground />
+
+  <div class="sidebar-contacts" aria-label="Contact links">
+    <a href="https://www.linkedin.com/in/sskotnikov/" target="_blank" rel="noopener noreferrer">
+      LinkedIn
+    </a>
+    <a href="mailto:kangukangu10@gmail.com">Email</a>
+  </div>
+</aside>

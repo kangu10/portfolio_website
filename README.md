@@ -11,9 +11,12 @@ Semyon Skotnikov's portfolio site for showcasing geospatial and urban research p
 
 ## Main structure
 
-- `src/pages/index.astro`: homepage hero
-- `src/pages/projects.astro`: projects gallery
-- `src/pages/projects/*.md`: individual project pages
-- `src/layouts/BaseLayout.astro`: shared page layout
-- `src/layouts/MarkdownPostLayout.astro`: project detail layout
-- `src/styles/index.css`: shared site styling
+- `src/pages/index.astro`: projects homepage
+- `src/pages/about.astro`: profile, CV and experience timeline
+- `src/pages/projects/*.astro`: individual project pages
+- `src/data/projects.ts`: project-card data and ordering
+- `src/components/Sidebar.astro`: shared profile and navigation sidebar
+- `src/components/SkillPlayground.astro`: interactive physics tags
+- `src/layouts/BaseLayout.astro`: shared inner-page layout
+- `src/styles/index.css`: base styles and design tokens
+- `src/styles/portfolio.css`: portfolio layout and component styles

@@ -12,7 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/ibm-plex-sans": "^5.3.0",
     "astro": "^6.1.5",
-    "embla-carousel": "^8.6.0"
+    "embla-carousel": "^8.6.0",
+    "matter-js": "^0.20.0"
   }
 }

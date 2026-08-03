@@ -3,19 +3,23 @@ const { title, url, description, type, year, status, coverImage } = Astro.props;
 ---
 <article class="project-card">
   <a
-    class:list={['project-card-link', coverImage && 'project-card-link-with-image']}
+    class:list={['project-card-link', coverImage ? 'project-card-link-with-image' : 'project-card-link-without-image']}
     href={url}
-    style={coverImage ? `--project-card-image: url("${coverImage}")` : undefined}
   >
-    <div class="project-card-meta">
-      {type && <span>{type}</span>}
-      {year && <span>{year}</span>}
-    </div>
-    <h2>{title}</h2>
-    {description && <p>{description}</p>}
-    <div class="project-card-footer">
+    {coverImage && (
+      <div class="project-card-media">
+        <img src={coverImage} alt="" loading="lazy" />
+      </div>
+    )}
+    <span class="project-card-arrow" aria-hidden="true">↗</span>
+    <div class="project-card-content">
+      <div class="project-card-meta">
+        {type && <span>{type}</span>}
+        {year && <span>{year}</span>}
+      </div>
+      <h2>{title}</h2>
+      {description && <p>{description}</p>}
       {status && <span class="project-status">{status}</span>}
-      <!-- <span class="project-arrow">Open project</span> -->
     </div>
   </a>
 </article>

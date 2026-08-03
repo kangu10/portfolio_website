@@ -3,51 +3,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'About me';
 const cvUrl = 'https://drive.google.com/file/d/1dvFmA0jEZtvLhuCf4CGzkzN55Wa0rEfO/view?usp=sharing';
+const timelineStart = 2017;
+const timelineEnd = new Date().getFullYear();
+const timelineYears = Array.from(
+  { length: timelineEnd - timelineStart + 1 },
+  (_, index) => timelineStart + index,
+);
 
-const workItems = [
+const timelineItems = [
+  {
+    period: '2017 - 2021',
+    kind: 'education',
+    kindLabel: 'Education',
+    title: 'Bachelor\'s degree in Regional Studies',
+    organization: 'Moscow State Linguistic University, Moscow',
+    barLabel: 'Bachelor\'s · MSLU',
+    startYear: 2017,
+    endYear: 2021,
+    description:
+      'Regional and cultural studies with a focus on Finland and the Finnish language.',
+  },
+  {
+    period: '2021 - 2023',
+    kind: 'education',
+    kindLabel: 'Education',
+    title: 'Master\'s degree in Urban Studies',
+    organization: 'Higher School of Economics, Moscow',
+    barLabel: 'Master\'s · HSE',
+    startYear: 2021,
+    endYear: 2023,
+    description: 'Studied urban theory and quantitative methods, applying GIS, spatial econometrics and R programming in coursework and independent research.',
+  },
+  {
+    period: '2022 - 2023',
+    kind: 'work',
+    kindLabel: 'Work',
+    title: 'Public Transit Data Analyst',
+    organization: 'MTP, Moscow',
+    barLabel: 'Transit analyst · MTP',
+    startYear: 2022,
+    endYear: 2023,
+    description:
+      'Developed over 30 scenario-based transit models. Conducted geospatial analyses for major public transit projects in Moscow. Created Python scripts to automate departmental workflows.',
+  },
   {
     period: '2023 - Present',
+    kind: 'work',
+    kindLabel: 'Work',
     title: 'GIS Analyst',
     organization: 'MIC-HUB',
+    barLabel: 'GIS analyst · MIC-HUB',
+    startYear: 2023,
+    endYear: timelineEnd,
     url: 'https://mic-hub.com',
     description:
       'Provided GIS analysis for more than 20 urban and regional mobility planning projects. Developed a QGIS network analysis plugin for internal use.',
   },
-  {
-    period: '2023',
-    title: 'Navigation Maps Editor',
-    organization: 'exit.design',
-    description:
-      'Prepared 50+ navigation maps and wayfinding schemes for Moscow Transport.',
-  },
-  {
-    period: '2022-2023',
-    title: 'Public Transit Data Analyst',
-    organization: 'MTP, Moscow',
-    description:
-      'Developed over 30 scenario-based transit models. Conducted geospatial analyses for major public transit projects in Moscow. Created Python scripts to automate departmental workflows.',
-  }
-]
-const educationItems = [
-  {
-    period: '2021-2023',
-    title: 'Master\'s degree in Urban Studies',
-    organization: 'Higher School of Economics, Moscow',
-    description: 'Studied urban theory and quantitative methods, applying GIS, spatial econometrics and R programming in coursework and independent research.',
-  },
-  {
-    period: '2017-2021',
-    title: 'Bachelor\'s degree in Regional Studies',
-    organization: 'Moscow State Linguistic University, Moscow',
-    description:
-      'Regional and cultural studies with a focus on Finland and the Finnish language.',
-  }
 ];
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageClass="about-page">
   <section class="about-intro">
     <p class="section-text">
-      Throughout my career, I've used GIS tools to solve different urban and transport planning problems.
+      Hi. My name is Semyon. I am a GIS Analyst at MIC-HUB, where I help mobility planners make more informed decisions based on spatial data.
+    </p>
+    <p class="section-text">
+      The intersection of spatial analysis and urban planning is my thing. I work with urban and transport data to understand how cities move — analysing public transport networks, accessibility, travel patterns and street systems.
+    </p>
+    <p class="section-text">
+      My work ranges from spatial analysis and scenario modelling to automating GIS workflows, building QGIS tools and creating interactive maps.
+      I’m especially interested in turning complex data into something people can actually use and understand. I enjoy projects where analysis, code, cartography and urban thinking come together.
     </p>
     <div class="about-actions">
       <a class="button button-primary" href={cvUrl} target="_blank" rel="noopener noreferrer">
@@ -56,48 +80,112 @@ const educationItems = [
     </div>
   </section>
 
-  <section class="timeline-section" aria-labelledby="workplaces-heading">
-    <div class="timeline-header">
-      <h2 id="workplaces-heading">Workplaces</h2>
+  <section class="journey-section" aria-labelledby="journey-heading">
+    <div class="journey-header">
+      <h2 id="journey-heading">Experience &amp; education</h2>
     </div>
-  
-    <div class="timeline">
-      {workItems.map((item) => (
-        <article class="timeline-item">
-          <p class="timeline-period">{item.period}</p>
-          <div class="timeline-content">
-            <h3>{item.title}</h3>
-            <p class="timeline-organization">
-              {item.url ? (
-                <a href={item.url} target="_blank" rel="noopener noreferrer">
-                  {item.organization}
-                </a>
-              ) : (
-                item.organization
-              )}
-            </p>
-            <p class="timeline-description">{item.description}</p>
+
+    <div class="spreadsheet-window">
+      <div class="spreadsheet-titlebar" aria-hidden="true">
+        <span class="spreadsheet-app-icon">X</span>
+        <span class="spreadsheet-file-name">career_timeline.xlsx</span>
+        <span class="spreadsheet-saved">Saved</span>
+      </div>
+
+      <div class="spreadsheet-formula" aria-hidden="true">
+        <span class="spreadsheet-name-box">B2</span>
+        <span class="spreadsheet-fx">fx</span>
+        <code>=SORTBY(experience, start_year, 1)</code>
+      </div>
+
+      <div class="journey-scroll" tabindex="0" aria-label="Career and education spreadsheet timeline">
+        <div
+          class="spreadsheet-grid"
+          role="table"
+          aria-label={`Experience and education from ${timelineStart} to ${timelineEnd}`}
+          style={`--year-count: ${timelineYears.length}; --today-column: ${timelineYears.length + 2};`}
+        >
+          <div class="sheet-semantic-row sheet-letter-row" aria-hidden="true">
+            <div class="sheet-corner"></div>
+            <div class="sheet-column-letter sheet-column-letter-title">A</div>
+            {timelineYears.map((year, index) => (
+              <div
+                class="sheet-column-letter"
+                style={`--sheet-column: ${index + 3};`}
+              >
+                {String.fromCharCode(66 + index)}
+              </div>
+            ))}
           </div>
-        </article>
-      ))}
-    </div>
-  </section>
-  <section class="timeline-section" aria-labelledby="education-heading">
-    <div class="timeline-header">
-      <h2 id="education-heading">Education</h2>
-    </div>
-  
-    <div class="timeline">
-      {educationItems.map((item) => (
-        <article class="timeline-item">
-          <p class="timeline-period">{item.period}</p>
-          <div class="timeline-content">
-            <h3>{item.title}</h3>
-            <p class="timeline-organization">{item.organization}</p>
-            <p class="timeline-description">{item.description}</p>
+
+          <div class="sheet-semantic-row" role="row">
+            <div class="sheet-row-number sheet-header-number" aria-hidden="true">1</div>
+            <div class="sheet-heading sheet-heading-title" role="columnheader">Role / degree</div>
+            {timelineYears.map((year, index) => (
+              <div
+                class="sheet-heading sheet-year"
+                role="columnheader"
+                style={`--sheet-column: ${index + 3};`}
+              >
+                {year}
+              </div>
+            ))}
           </div>
-        </article>
-      ))}
+
+          {timelineItems.map((item, index) => (
+            <div class="sheet-semantic-row" role="row">
+              <div
+                class="sheet-row-number"
+                aria-hidden="true"
+                style={`--sheet-row: ${index + 3};`}
+              >
+                {index + 2}
+              </div>
+              <article
+                class:list={['sheet-entry', `sheet-entry-${item.kind}`]}
+                role="rowheader"
+                style={`--sheet-row: ${index + 3};`}
+              >
+                <div class="sheet-entry-meta">
+                  <span class="sheet-kind">{item.kindLabel}</span>
+                  <span>{item.period}</span>
+                </div>
+                <h3>{item.title}</h3>
+                <p class="sheet-organization">
+                  {item.url ? (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      {item.organization}
+                    </a>
+                  ) : (
+                    item.organization
+                  )}
+                </p>
+                <p class="sheet-description">{item.description}</p>
+              </article>
+
+              {timelineYears.map((year, yearIndex) => (
+                <div
+                  class="sheet-cell"
+                  role="cell"
+                  aria-label={`${item.title}, ${year}`}
+                  style={`--sheet-row: ${index + 3}; --sheet-column: ${yearIndex + 3};`}
+                ></div>
+              ))}
+
+              <div
+                class:list={['sheet-bar', `sheet-bar-${item.kind}`]}
+                aria-hidden="true"
+                title={`${item.title}: ${item.period}`}
+                style={`--sheet-row: ${index + 3}; --bar-start: ${item.startYear - timelineStart + 3}; --bar-span: ${item.endYear - item.startYear + 1};`}
+              >
+                <span>{item.barLabel}</span>
+              </div>
+            </div>
+          ))}
+
+          <div class="sheet-today" aria-hidden="true"><span>Today</span></div>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

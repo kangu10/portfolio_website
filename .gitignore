@@ -12,6 +12,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+.astro-dev*.log
+
+# local caches
+.npm-cache/
+__pycache__/
+*.py[cod]
 
 # environment variables
 .env

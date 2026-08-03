@@ -1,5 +1,14 @@
 export const projects = [
   {
+    slug: 'world-cup-2026-team-flight-map',
+    title: 'World Cup 2026 Team Flight Map',
+    description:
+      'Team-by-team flight routes, distances and estimated CO2e for the 2026 World Cup.',
+    type: 'Interactive maps',
+    year: '2026',
+    coverImage: '/images/wc26-flight-map-cover.png'
+  },
+  {
     slug: 'belgrade-future-metro-accessibility',
     title: 'Belgrade Future Metro Accessibility Map',
     description:

@@ -1,0 +1,399 @@
+---
+const tags = [
+  { label: 'Transport planning', hue: '#2e90fa' },
+  { label: 'Urban planning', hue: '#17b26a' },
+  { label: 'Web mapping', hue: '#7a5af8' },
+  { label: 'Spatial data engineering', hue: '#f79009' },
+  { label: 'QGIS plugin development', hue: '#ee46bc' },
+  { label: 'Cartography', hue: '#0ba5ec' },
+  { label: 'Spatial analysis', hue: '#7f56d9' },
+];
+---
+<section class="skill-playground" data-skill-playground aria-label="Interactive toolbox">
+  <ul class="visually-hidden">
+    {tags.map((tag) => <li>{tag.label}</li>)}
+  </ul>
+  <div class="skill-playground-stage">
+    <div class="skill-playground-world" aria-hidden="true">
+      {tags.map((tag, index) => (
+        <span
+          class="physics-tag"
+          data-physics-tag
+          data-index={index}
+          style={`--hue: ${tag.hue}`}
+        >
+          {tag.label}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  import Matter from 'matter-js';
+
+  const { Bodies, Body, Composite, Constraint, Engine, Events, Query, Runner, Sleeping, Vector } = Matter;
+
+  const initializePlayground = (root) => {
+    if (root.dataset.initialized === 'true') return;
+    root.dataset.initialized = 'true';
+
+    const stage = root.querySelector('.skill-playground-world');
+    const tagElements = Array.from(root.querySelectorAll('[data-physics-tag]'));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (!stage || !tagElements.length || reduceMotion.matches) {
+      stage?.classList.add('is-static');
+      return;
+    }
+
+    let stopSimulation = () => {};
+    let resizeFrame = 0;
+
+    const buildSimulation = () => {
+      stopSimulation();
+
+      const width = stage.clientWidth;
+      const height = stage.clientHeight;
+      if (!width || !height) return;
+
+      const engine = Engine.create({ enableSleeping: true });
+      engine.positionIterations = 12;
+      engine.velocityIterations = 8;
+      engine.constraintIterations = 4;
+      engine.gravity.y = 0.9;
+      const runner = Runner.create({
+        delta: 1000 / 60,
+        isFixed: true,
+      });
+      const wallSize = 80;
+      const boundaryPadding = 8;
+      const escapeTolerance = 5;
+      const collisionMargin = 0.75;
+      const wallOptions = {
+        isStatic: true,
+        friction: 0.8,
+        restitution: 0.04,
+        slop: 0.01,
+      };
+      const walls = [
+        Bodies.rectangle(width / 2, height - boundaryPadding + wallSize / 2, width + wallSize * 2, wallSize, wallOptions),
+        Bodies.rectangle(boundaryPadding - wallSize / 2, height / 2, wallSize, height * 2, wallOptions),
+        Bodies.rectangle(width - boundaryPadding + wallSize / 2, height / 2, wallSize, height * 2, wallOptions),
+        Bodies.rectangle(width / 2, boundaryPadding - wallSize / 2, width + wallSize * 2, wallSize, wallOptions),
+      ];
+
+      const angles = [-0.12, 0.08, -0.05, 0.13, -0.09, 0.06, -0.14, 0.1];
+      const bodies = tagElements.map((element, index) => {
+        const tagWidth = element.offsetWidth;
+        const tagHeight = element.offsetHeight;
+        const colliderWidth = tagWidth + collisionMargin * 2;
+        const colliderHeight = tagHeight + collisionMargin * 2;
+        const minX = colliderWidth / 2 + 10;
+        const maxX = Math.max(minX, width - colliderWidth / 2 - 10);
+        const availableX = Math.max(1, maxX - minX);
+        const x = minX + ((index * 67 + 23) % availableX);
+        const y = 22 + (index % 4) * 8;
+        const capsuleRadius = colliderHeight / 2;
+        const straightWidth = Math.max(1, colliderWidth - colliderHeight);
+        const halfStraight = straightWidth / 2;
+        const body = Body.create({
+          parts: [
+            Bodies.rectangle(x, y, straightWidth, colliderHeight),
+            Bodies.circle(x - halfStraight, y, capsuleRadius, {}, 32),
+            Bodies.circle(x + halfStraight, y, capsuleRadius, {}, 32),
+          ],
+          restitution: 0.16,
+          friction: 0.45,
+          frictionStatic: 0.9,
+          frictionAir: 0.024,
+          density: 0.0014,
+          slop: 0.005,
+          sleepThreshold: 80,
+        });
+        Body.setAngle(body, angles[index % angles.length]);
+        body.plugin = { element, tagWidth, tagHeight };
+        return body;
+      });
+
+      const containBodies = () => {
+        bodies.forEach((body) => {
+          let offsetX = 0;
+          let offsetY = 0;
+
+          if (body.bounds.min.x < boundaryPadding - escapeTolerance) offsetX = boundaryPadding - body.bounds.min.x;
+          if (body.bounds.max.x > width - boundaryPadding + escapeTolerance) offsetX = width - boundaryPadding - body.bounds.max.x;
+          if (body.bounds.min.y < boundaryPadding - escapeTolerance) offsetY = boundaryPadding - body.bounds.min.y;
+          if (body.bounds.max.y > height - boundaryPadding + escapeTolerance) offsetY = height - boundaryPadding - body.bounds.max.y;
+
+          if (offsetX || offsetY) {
+            Body.translate(body, { x: offsetX, y: offsetY });
+            Body.setVelocity(body, {
+              x: offsetX ? -body.velocity.x * 0.2 : body.velocity.x,
+              y: offsetY ? -body.velocity.y * 0.2 : body.velocity.y,
+            });
+            Body.setAngularVelocity(body, body.angularVelocity * 0.45);
+          }
+        });
+      };
+
+      const closestPointOnSegment = (point, start, end) => {
+        const dx = end.x - start.x;
+        const dy = end.y - start.y;
+        const lengthSquared = dx * dx + dy * dy;
+        if (!lengthSquared) return { x: start.x, y: start.y };
+        const amount = Math.max(0, Math.min(1,
+          ((point.x - start.x) * dx + (point.y - start.y) * dy) / lengthSquared,
+        ));
+        return { x: start.x + dx * amount, y: start.y + dy * amount };
+      };
+
+      const segmentCrosses = (a, b, c, d) => {
+        const cross = (p, q, r) =>
+          (q.x - p.x) * (r.y - p.y) - (q.y - p.y) * (r.x - p.x);
+        return cross(a, b, c) * cross(a, b, d) <= 0 &&
+          cross(c, d, a) * cross(c, d, b) <= 0;
+      };
+
+      const getVisibleCapsule = (body) => {
+        const { tagWidth, tagHeight } = body.plugin;
+        const halfSegment = Math.max(0, (tagWidth - tagHeight) / 2);
+        const axisX = Math.cos(body.angle);
+        const axisY = Math.sin(body.angle);
+        return {
+          center: body.position,
+          start: {
+            x: body.position.x - axisX * halfSegment,
+            y: body.position.y - axisY * halfSegment,
+          },
+          end: {
+            x: body.position.x + axisX * halfSegment,
+            y: body.position.y + axisY * halfSegment,
+          },
+          radius: tagHeight / 2,
+        };
+      };
+
+      const getCapsuleContact = (capsuleA, capsuleB) => {
+        let best = null;
+        const consider = (pointA, pointB) => {
+          const dx = pointB.x - pointA.x;
+          const dy = pointB.y - pointA.y;
+          const distanceSquared = dx * dx + dy * dy;
+          if (!best || distanceSquared < best.distanceSquared) {
+            best = { dx, dy, distanceSquared };
+          }
+        };
+
+        consider(capsuleA.start, closestPointOnSegment(capsuleA.start, capsuleB.start, capsuleB.end));
+        consider(capsuleA.end, closestPointOnSegment(capsuleA.end, capsuleB.start, capsuleB.end));
+        consider(closestPointOnSegment(capsuleB.start, capsuleA.start, capsuleA.end), capsuleB.start);
+        consider(closestPointOnSegment(capsuleB.end, capsuleA.start, capsuleA.end), capsuleB.end);
+
+        if (segmentCrosses(capsuleA.start, capsuleA.end, capsuleB.start, capsuleB.end)) {
+          best = {
+            dx: capsuleB.center.x - capsuleA.center.x,
+            dy: capsuleB.center.y - capsuleA.center.y,
+            distanceSquared: 0,
+          };
+        }
+
+        return best;
+      };
+
+      const resolveVisibleOverlaps = () => {
+        const visualGap = 1.5;
+        let corrections = 0;
+        for (let first = 0; first < bodies.length; first += 1) {
+          for (let second = first + 1; second < bodies.length; second += 1) {
+            const bodyA = bodies[first];
+            const bodyB = bodies[second];
+            const capsuleA = getVisibleCapsule(bodyA);
+            const capsuleB = getVisibleCapsule(bodyB);
+            const contact = getCapsuleContact(capsuleA, capsuleB);
+            const distance = Math.sqrt(contact.distanceSquared);
+            const penetration = capsuleA.radius + capsuleB.radius + visualGap - distance;
+            if (penetration <= 0) continue;
+            corrections += 1;
+
+            let normalX = contact.dx;
+            let normalY = contact.dy;
+            let normalLength = Math.hypot(normalX, normalY);
+            if (normalLength < 0.001) {
+              normalX = bodyB.position.x - bodyA.position.x;
+              normalY = bodyB.position.y - bodyA.position.y;
+              normalLength = Math.hypot(normalX, normalY) || 1;
+            }
+            normalX /= normalLength;
+            normalY /= normalLength;
+
+            const aShare = bodyA === draggedBody ? 0 : bodyB === draggedBody ? 1 : 0.5;
+            const bShare = 1 - aShare;
+            if (aShare) Body.translate(bodyA, {
+              x: -normalX * penetration * aShare,
+              y: -normalY * penetration * aShare,
+            });
+            if (bShare) Body.translate(bodyB, {
+              x: normalX * penetration * bShare,
+              y: normalY * penetration * bShare,
+            });
+
+            if (bodyA !== draggedBody) {
+              Body.setVelocity(bodyA, { x: bodyA.velocity.x * 0.82, y: bodyA.velocity.y * 0.82 });
+              Body.setAngularVelocity(bodyA, bodyA.angularVelocity * 0.86);
+            }
+            if (bodyB !== draggedBody) {
+              Body.setVelocity(bodyB, { x: bodyB.velocity.x * 0.82, y: bodyB.velocity.y * 0.82 });
+              Body.setAngularVelocity(bodyB, bodyB.angularVelocity * 0.86);
+            }
+          }
+        }
+        return corrections;
+      };
+
+      const updateElements = () => {
+        if (!isFrozen) {
+          for (let pass = 0; pass < 36; pass += 1) resolveVisibleOverlaps();
+          containBodies();
+          for (let pass = 0; pass < 12; pass += 1) {
+            resolveVisibleOverlaps();
+          }
+        }
+
+        if (!draggedBody && !isFrozen && performance.now() >= settleAt) {
+          bodies.forEach((body) => {
+            Body.setVelocity(body, { x: 0, y: 0 });
+            Body.setAngularVelocity(body, 0);
+            Sleeping.set(body, true);
+            Body.setStatic(body, true);
+          });
+          isFrozen = true;
+        }
+
+        bodies.forEach((body) => {
+          const { element, tagWidth, tagHeight } = body.plugin;
+          element.style.transform = `translate3d(${body.position.x - tagWidth / 2}px, ${body.position.y - tagHeight / 2}px, 0) rotate(${body.angle}rad)`;
+        });
+      };
+
+      const setDragging = () => stage.classList.add('is-dragging');
+      const clearDragging = () => stage.classList.remove('is-dragging');
+
+      let draggedBody = null;
+      let dragConstraint = null;
+      let activePointerId = null;
+      let settleAt = performance.now() + 3000;
+      let isFrozen = false;
+
+      const getStagePoint = (event) => {
+        const bounds = stage.getBoundingClientRect();
+        return {
+          x: Math.max(boundaryPadding, Math.min(width - boundaryPadding, event.clientX - bounds.left)),
+          y: Math.max(boundaryPadding, Math.min(height - boundaryPadding, event.clientY - bounds.top)),
+        };
+      };
+
+      const handlePointerDown = (event) => {
+        const point = getStagePoint(event);
+        const matches = Query.point(bodies, point);
+        if (!matches.length) return;
+
+        draggedBody = matches[matches.length - 1];
+        activePointerId = event.pointerId;
+        settleAt = Number.POSITIVE_INFINITY;
+        isFrozen = false;
+        bodies.forEach((body) => {
+          if (body.isStatic) Body.setStatic(body, false);
+          Sleeping.set(body, false);
+        });
+        const localGrabPoint = Vector.rotate(
+          Vector.sub(point, draggedBody.position),
+          -draggedBody.angle,
+        );
+        dragConstraint = Constraint.create({
+          pointA: { x: point.x, y: point.y },
+          bodyB: draggedBody,
+          pointB: localGrabPoint,
+          length: 0,
+          stiffness: 0.32,
+          damping: 0.18,
+          render: { visible: false },
+        });
+        Composite.add(engine.world, dragConstraint);
+        stage.setPointerCapture(event.pointerId);
+        setDragging();
+        event.preventDefault();
+      };
+
+      const handlePointerMove = (event) => {
+        if (!draggedBody || event.pointerId !== activePointerId) return;
+        const point = getStagePoint(event);
+        dragConstraint.pointA.x = point.x;
+        dragConstraint.pointA.y = point.y;
+        event.preventDefault();
+      };
+
+      const releasePointer = (event) => {
+        if (!draggedBody || event.pointerId !== activePointerId) return;
+        const releasedBody = draggedBody;
+        draggedBody = null;
+        activePointerId = null;
+        settleAt = performance.now() + 3000;
+        if (dragConstraint) {
+          Composite.remove(engine.world, dragConstraint);
+          dragConstraint = null;
+        }
+        Body.setVelocity(releasedBody, {
+          x: Math.max(-12, Math.min(12, releasedBody.velocity.x)),
+          y: Math.max(-12, Math.min(12, releasedBody.velocity.y)),
+        });
+        if (stage.hasPointerCapture(event.pointerId)) {
+          stage.releasePointerCapture(event.pointerId);
+        }
+        clearDragging();
+        event.preventDefault();
+      };
+
+      Events.on(engine, 'afterUpdate', updateElements);
+      stage.addEventListener('pointerdown', handlePointerDown);
+      stage.addEventListener('pointermove', handlePointerMove);
+      stage.addEventListener('pointerup', releasePointer);
+      stage.addEventListener('pointercancel', releasePointer);
+      Composite.add(engine.world, [...walls, ...bodies]);
+      updateElements();
+      Runner.run(runner, engine);
+
+      stopSimulation = () => {
+        Runner.stop(runner);
+        Events.off(engine, 'afterUpdate', updateElements);
+        stage.removeEventListener('pointerdown', handlePointerDown);
+        stage.removeEventListener('pointermove', handlePointerMove);
+        stage.removeEventListener('pointerup', releasePointer);
+        stage.removeEventListener('pointercancel', releasePointer);
+        Composite.clear(engine.world, false);
+        Engine.clear(engine);
+      };
+    };
+
+    const resizeObserver = new ResizeObserver(() => {
+      window.cancelAnimationFrame(resizeFrame);
+      resizeFrame = window.requestAnimationFrame(buildSimulation);
+    });
+
+    resizeObserver.observe(stage);
+    buildSimulation();
+
+    window.addEventListener('pagehide', () => {
+      resizeObserver.disconnect();
+      window.cancelAnimationFrame(resizeFrame);
+      stopSimulation();
+    }, { once: true });
+  };
+
+  const startPlaygrounds = async () => {
+    if (document.fonts?.ready) await document.fonts.ready;
+    document.querySelectorAll('[data-skill-playground]').forEach(initializePlayground);
+  };
+
+  startPlaygrounds();
+</script>
