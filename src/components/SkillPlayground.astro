@@ -5,8 +5,8 @@ const tags = [
   { label: 'Web mapping', hue: '#7a5af8' },
   { label: 'Spatial data engineering', hue: '#f79009' },
   { label: 'QGIS plugin development', hue: '#ee46bc' },
-  { label: 'Cartography', hue: '#0ba5ec' },
-  { label: 'Spatial analysis', hue: '#7f56d9' },
+  { label: 'Cartography', hue: '#15b79e' },
+  { label: 'Spatial analysis', hue: '#f04438' },
 ];
 ---
 <section class="skill-playground" data-skill-playground aria-label="Interactive toolbox">
@@ -61,10 +61,9 @@ const tags = [
       engine.positionIterations = 12;
       engine.velocityIterations = 8;
       engine.constraintIterations = 4;
-      engine.gravity.y = 0.9;
+      engine.gravity.y = 1.55;
       const runner = Runner.create({
         delta: 1000 / 60,
-        isFixed: true,
       });
       const wallSize = 80;
       const boundaryPadding = 8;
@@ -103,10 +102,10 @@ const tags = [
             Bodies.circle(x - halfStraight, y, capsuleRadius, {}, 32),
             Bodies.circle(x + halfStraight, y, capsuleRadius, {}, 32),
           ],
-          restitution: 0.16,
+          restitution: 0.09,
           friction: 0.45,
           frictionStatic: 0.9,
-          frictionAir: 0.024,
+          frictionAir: 0.014,
           density: 0.0014,
           slop: 0.005,
           sleepThreshold: 80,
@@ -252,22 +251,34 @@ const tags = [
       };
 
       const updateElements = () => {
+        let remainingOverlaps = 0;
+
         if (!isFrozen) {
           for (let pass = 0; pass < 36; pass += 1) resolveVisibleOverlaps();
           containBodies();
           for (let pass = 0; pass < 12; pass += 1) {
-            resolveVisibleOverlaps();
+            remainingOverlaps = resolveVisibleOverlaps();
           }
         }
 
-        if (!draggedBody && !isFrozen && performance.now() >= settleAt) {
-          bodies.forEach((body) => {
-            Body.setVelocity(body, { x: 0, y: 0 });
-            Body.setAngularVelocity(body, 0);
-            Sleeping.set(body, true);
-            Body.setStatic(body, true);
-          });
-          isFrozen = true;
+        if (!draggedBody && !isFrozen) {
+          const bodiesAreStill = bodies.every(
+            (body) => body.speed < 0.12 && Math.abs(body.angularVelocity) < 0.025,
+          );
+
+          settledFrames = bodiesAreStill && remainingOverlaps === 0
+            ? settledFrames + 1
+            : 0;
+
+          if (performance.now() >= settleAt && settledFrames >= 36) {
+            bodies.forEach((body) => {
+              Body.setVelocity(body, { x: 0, y: 0 });
+              Body.setAngularVelocity(body, 0);
+              Sleeping.set(body, true);
+              Body.setStatic(body, true);
+            });
+            isFrozen = true;
+          }
         }
 
         bodies.forEach((body) => {
@@ -282,7 +293,8 @@ const tags = [
       let draggedBody = null;
       let dragConstraint = null;
       let activePointerId = null;
-      let settleAt = performance.now() + 3000;
+      let settleAt = performance.now() + 900;
+      let settledFrames = 0;
       let isFrozen = false;
 
       const getStagePoint = (event) => {
@@ -301,6 +313,7 @@ const tags = [
         draggedBody = matches[matches.length - 1];
         activePointerId = event.pointerId;
         settleAt = Number.POSITIVE_INFINITY;
+        settledFrames = 0;
         isFrozen = false;
         bodies.forEach((body) => {
           if (body.isStatic) Body.setStatic(body, false);
@@ -338,7 +351,8 @@ const tags = [
         const releasedBody = draggedBody;
         draggedBody = null;
         activePointerId = null;
-        settleAt = performance.now() + 3000;
+        settleAt = performance.now() + 500;
+        settledFrames = 0;
         if (dragConstraint) {
           Composite.remove(engine.world, dragConstraint);
           dragConstraint = null;

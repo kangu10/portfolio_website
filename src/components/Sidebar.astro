@@ -2,14 +2,15 @@
 import SkillPlayground from './SkillPlayground.astro';
 
 const pathname = Astro.url.pathname;
+const showPlayground = pathname === '/';
 
 const links = [
   { href: '/', label: 'Projects', isActive: pathname === '/' || pathname.startsWith('/projects') },
   { href: '/about', label: 'About me', isActive: pathname.startsWith('/about') },
 ];
 ---
-<aside class="portfolio-sidebar">
-  <div>
+<aside class:list={['portfolio-sidebar', showPlayground ? 'portfolio-sidebar-home' : 'portfolio-sidebar-compact']}>
+  <div class="sidebar-intro">
     <a class="sidebar-name" href="/">Semyon Skotnikov</a>
     <p class="sidebar-role">GIS Analyst &amp; Urban Researcher</p>
     <p class="sidebar-location">Based in Belgrade, Serbia</p>
@@ -23,12 +24,65 @@ const links = [
     </nav>
   </div>
 
-  <SkillPlayground />
+  {showPlayground && <SkillPlayground />}
 
   <div class="sidebar-contacts" aria-label="Contact links">
     <a href="https://www.linkedin.com/in/sskotnikov/" target="_blank" rel="noopener noreferrer">
       LinkedIn
     </a>
-    <a href="mailto:kangukangu10@gmail.com">Email</a>
+    <button
+      class="sidebar-email"
+      type="button"
+      data-copy-email="kangukangu10@gmail.com"
+      aria-label="Copy email address kangukangu10@gmail.com"
+      title="Copy email address"
+    >
+      <span aria-live="polite">kangukangu10@gmail.com</span>
+    </button>
   </div>
 </aside>
+
+<script>
+  const emailButton = document.querySelector<HTMLButtonElement>('[data-copy-email]');
+
+  if (emailButton) {
+    const email = emailButton.dataset.copyEmail ?? '';
+    const label = emailButton.querySelector('span');
+    let resetTimer: number | undefined;
+
+    const copyWithFallback = async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+        return true;
+      } catch {
+        const input = document.createElement('textarea');
+        input.value = email;
+        input.setAttribute('readonly', '');
+        input.style.position = 'fixed';
+        input.style.opacity = '0';
+        document.body.append(input);
+        input.select();
+        const copied = document.execCommand('copy');
+        input.remove();
+        return copied;
+      }
+    };
+
+    emailButton.addEventListener('click', async () => {
+      const copied = await copyWithFallback();
+
+      if (!copied) {
+        window.prompt('Copy email address:', email);
+        return;
+      }
+
+      if (label) label.textContent = 'Copied!';
+      emailButton.setAttribute('aria-label', `Email copied: ${email}`);
+      window.clearTimeout(resetTimer);
+      resetTimer = window.setTimeout(() => {
+        if (label) label.textContent = email;
+        emailButton.setAttribute('aria-label', `Copy email address ${email}`);
+      }, 1800);
+    });
+  }
+</script>
