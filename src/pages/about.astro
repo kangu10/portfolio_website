@@ -99,7 +99,7 @@ const orderedTimelineItems = [...timelineItems].sort(
       <div class="spreadsheet-formula" aria-hidden="true">
         <span class="spreadsheet-name-box">B2</span>
         <span class="spreadsheet-fx">fx</span>
-        <code>=SORTBY(experience, start_year, 1)</code>
+        <code>=SORTBY(VSTACK(work, education), start_year, -1)</code>
       </div>
 
       <div class="journey-scroll" tabindex="0" aria-label="Career and education spreadsheet timeline">
