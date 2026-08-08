@@ -1,14 +1,28 @@
 ---
-const { title, url, description, type, year, status, coverImage } = Astro.props;
+const { title, url, description, type, year, status, coverImage, coverVideo } = Astro.props;
+const hasCover = Boolean(coverImage || coverVideo);
 ---
 <article class="project-card">
   <a
-    class:list={['project-card-link', coverImage ? 'project-card-link-with-image' : 'project-card-link-without-image']}
+    class:list={['project-card-link', hasCover ? 'project-card-link-with-image' : 'project-card-link-without-image']}
     href={url}
   >
-    {coverImage && (
+    {hasCover && (
       <div class="project-card-media">
-        <img src={coverImage} alt="" loading="lazy" />
+        {coverVideo ? (
+          <video
+            src={coverVideo}
+            poster={coverImage}
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-hidden="true"
+          ></video>
+        ) : (
+          <img src={coverImage} alt="" loading="lazy" />
+        )}
       </div>
     )}
     <span class="project-card-arrow" aria-hidden="true">↗</span>

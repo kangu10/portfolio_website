@@ -1,11 +1,15 @@
 ---
 import SkillPlayground from './SkillPlayground.astro';
+import { projects } from '../data/projects';
 
 const pathname = Astro.url.pathname;
 const showPlayground = pathname === '/';
+const isProjectPage = projects.some(({ slug }) =>
+  pathname === `/${slug}` || pathname === `/${slug}/`
+);
 
 const links = [
-  { href: '/', label: 'Projects', isActive: pathname === '/' || pathname.startsWith('/projects') },
+  { href: '/', label: 'Projects', isActive: pathname === '/' || isProjectPage },
   { href: '/about', label: 'About me', isActive: pathname.startsWith('/about') },
 ];
 ---

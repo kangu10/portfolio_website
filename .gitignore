@@ -19,6 +19,11 @@ pnpm-debug.log*
 __pycache__/
 *.py[cod]
 
+# local source videos (web-optimised copies are tracked separately)
+public/images/Alpi Trails.mp4
+public/images/Napoli Isochrone.mov
+public/images/Treviso OD.mp4
+
 # environment variables
 .env
 .env.production

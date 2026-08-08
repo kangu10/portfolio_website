@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'GPS Mobility Visualisations';
+
+const animations = [
+  {
+    title: 'Alpi Apuane Trails',
+    description:
+      'GPS trails reveal how movement is distributed across the mountain landscape of the Alpi Apuane.',
+    src: '/images/gps-alpi-trails.mp4',
+    poster: '/images/gps-alpi-trails-poster.jpg'
+  },
+  {
+    title: 'Treviso Origin–Destination Flows',
+    description:
+      'An animated origin–destination view of trips across the Treviso region. Each dot represents a certain number of trips (size of the dot is proportional to the number of trips) moving from origins to destinations.',
+    src: '/images/gps-treviso-od.mp4',
+    poster: '/images/gps-treviso-od-poster.jpg'
+  },
+  {
+    title: 'Naples Isochrone',
+    description:
+      'A wave-like animation showing how an accessibility isochrone expands across Naples.',
+    src: '/images/gps-naples-isochrone.mp4',
+    poster: '/images/gps-naples-isochrone-poster.jpg'
+  }
+];
+---
+<BaseLayout pageTitle={pageTitle}>
+  <article class="project-detail">
+    <div class="project-detail-hero">
+      <div class="project-detail-copy">
+        <div class="project-facts">
+          <p>Advanced data visualisation</p>
+          <p>2026</p>
+          <p>Animated maps</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-richtext">
+      <h2>Overview</h2>
+      <p>
+        At MIC-HUB, we turned complex GPS-derived mobility data into clear stories. I created three animated spatial visualisations. My focus was on the visual concept, cartographic design and animation.
+      </p>
+      <p>
+        The result is a set of visual stories that make movement patterns easier to explore across local, urban and regional scales.
+      </p>
+      <p>
+        These visualisations were also featured in a video introducing
+        <a href="https://www.mic-hub.com/project/type/mobility-data-science/" target="_blank" rel="noopener noreferrer">MIC-HUB's Mobility Data Science unit</a>.
+      </p>
+    </div>
+
+    {animations.map((animation) => (
+      <section class="project-animation">
+        <div class="project-richtext">
+          <h2>{animation.title}</h2>
+          <p>{animation.description}</p>
+        </div>
+        <figure class="project-feature-media">
+          <video
+            src={animation.src}
+            poster={animation.poster}
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            controls
+          ></video>
+        </figure>
+      </section>
+    ))}
+  </article>
+</BaseLayout>
+
+<style>
+  .project-animation {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .project-animation + .project-animation {
+    margin-top: clamp(1rem, 2vw, 2rem);
+  }
+
+  .project-animation .project-richtext {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .project-animation .project-richtext h2,
+  .project-animation .project-richtext p {
+    margin: 0;
+  }
+
+  .project-feature-media video {
+    aspect-ratio: 24 / 13;
+    object-fit: contain;
+    background: #111310;
+  }
+</style>

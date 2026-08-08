@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'Zvezdara Forest Urban Analysis';
+---
+<BaseLayout pageTitle={pageTitle}>
+  <article class="project-detail">
+    <div class="project-detail-hero">
+      <div class="project-detail-copy">
+        <div class="project-facts">
+          <p>Volunteer urban research</p>
+          <p>2024</p>
+          <p>Accessibility &amp; road-safety maps</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-richtext">
+      <h2>Overview</h2>
+      <p>
+        Ambasada za urbanizam is a volunteer collective in Belgrade working on community-led urban initiatives. As part of its work on Zvezdara Forest, the group studied the park and its surroundings to understand existing conditions and develop ideas for future improvements.
+      </p>
+      <p>
+        My contribution was a set of analytical maps: road crashes within 500 metres of the park; 10-, 20- and 30-minute driving accessibility to its centre; and walking accessibility to both the centre and park entrances.
+      </p>
+      <p>
+        The project began in 2024 and is still ongoing. As of 2026, I am working on several additional maps.
+      </p>
+
+      <div class="project-gallery-shell">
+        <button class="project-gallery-arrow project-gallery-arrow-prev" type="button" aria-label="Previous map">
+          &larr;
+        </button>
+        <div class="project-gallery-viewport">
+          <div class="project-gallery" aria-label="Zvezdara Forest maps gallery">
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open road crashes map larger">
+                <img
+                  src="/images/zvezdara-road-crashes.png"
+                  alt="Road crashes recorded from 2021 to 2023 near Zvezdara Forest."
+                />
+              </button>
+              <figcaption>Road crashes recorded from 2021 to 2023 within and around 500 metres of Zvezdara Forest.</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open driving accessibility map larger">
+                <img
+                  src="/images/zvezdara-driving-accessibility-centre.png"
+                  alt="10-, 20- and 30-minute driving accessibility to the centre of Zvezdara Forest."
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>10-, 20- and 30-minute driving accessibility to the centre of Zvezdara Forest.</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open walking accessibility to the centre map larger">
+                <img
+                  src="/images/zvezdara-walking-accessibility-centre.png"
+                  alt="10-, 20- and 30-minute walking accessibility to the centre of Zvezdara Forest."
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>10-, 20- and 30-minute walking accessibility to the centre of Zvezdara Forest.</figcaption>
+            </figure>
+            <figure class="project-gallery-item">
+              <button class="project-gallery-open" type="button" aria-label="Open walking accessibility to park entrances map larger">
+                <img
+                  src="/images/zvezdara-walking-accessibility-entrances.png"
+                  alt="10-, 20- and 30-minute walking accessibility to the entrances of Zvezdara Forest."
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>10-, 20- and 30-minute walking accessibility to the entrances of Zvezdara Forest.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="project-gallery-arrow project-gallery-arrow-next" type="button" aria-label="Next map">
+          &rarr;
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <dialog class="project-lightbox" aria-label="Expanded Zvezdara Forest map view">
+    <div class="project-lightbox-panel">
+      <button class="project-lightbox-close" type="button" aria-label="Close expanded map">
+        &times;
+      </button>
+      <button class="project-lightbox-nav project-lightbox-prev" type="button" aria-label="Show previous map">
+        &larr;
+      </button>
+      <figure class="project-lightbox-figure">
+        <img class="project-lightbox-image" alt="" />
+        <figcaption class="project-lightbox-caption"></figcaption>
+      </figure>
+      <button class="project-lightbox-nav project-lightbox-next" type="button" aria-label="Show next map">
+        &rarr;
+      </button>
+    </div>
+  </dialog>
+
+  <script>
+    import '../scripts/project-gallery-embla.js';
+  </script>
+</BaseLayout>

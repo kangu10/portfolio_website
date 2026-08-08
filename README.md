@@ -13,7 +13,7 @@ Semyon Skotnikov's portfolio site for showcasing geospatial and urban research p
 
 - `src/pages/index.astro`: projects homepage
 - `src/pages/about.astro`: profile, CV and experience timeline
-- `src/pages/projects/*.astro`: individual project pages
+- `src/pages/*.astro`: homepage, profile and individual project pages
 - `src/data/projects.ts`: project-card data and ordering
 - `src/components/Sidebar.astro`: shared profile and navigation sidebar
 - `src/components/SkillPlayground.astro`: interactive physics tags

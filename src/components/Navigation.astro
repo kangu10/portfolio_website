@@ -2,9 +2,8 @@
 const pathname = Astro.url.pathname;
 
 const links = [
-  { href: '/', label: 'Home', isActive: pathname === '/' },
+  { href: '/', label: 'Projects', isActive: pathname !== '/about' && pathname !== '/about/' },
   { href: '/about', label: 'About me', isActive: pathname.startsWith('/about') },
-  { href: '/projects', label: 'Projects', isActive: pathname.startsWith('/projects') },
 ];
 ---
 <div id="main-menu" class="nav-links">

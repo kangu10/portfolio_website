@@ -36,12 +36,13 @@ import { projects } from '../data/projects';
         <section class="projects-grid">
           {projects.map((project) => (
             <BlogPost
-              url={`/projects/${project.slug}`}
+              url={`/${project.slug}`}
               title={project.title}
               description={project.description}
               type={project.type}
               year={project.year}
               coverImage={project.coverImage}
+              coverVideo={project.coverVideo}
             />
           ))}
         </section>

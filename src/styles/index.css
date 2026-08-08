@@ -555,7 +555,8 @@ h1 {
   width: 100%;
 }
 
-.project-feature-media img {
+.project-feature-media img,
+.project-feature-media video {
   display: block;
   width: 100%;
   max-height: min(78vh, 920px);
